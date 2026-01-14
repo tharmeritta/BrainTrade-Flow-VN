@@ -3,7 +3,6 @@ import { Step, Language } from '../types';
 import { 
   Clock, CheckSquare, Square, ArrowRight, ArrowLeft 
 } from 'lucide-react';
-import { AIAssistant } from './AIAssistant';
 import { NotesPanel } from './NotesPanel';
 
 interface ActiveCallViewProps {
@@ -58,7 +57,7 @@ export const ActiveCallView: React.FC<ActiveCallViewProps> = ({
   };
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6 pb-8 lg:pb-0">
+    <div className="flex flex-col lg:flex-row gap-6 pb-8 lg:pb-0 h-full">
       {/* Left Column: Script */}
       <div 
         className="flex-1 bg-white rounded-2xl shadow-sm border border-gray-200 flex flex-col overflow-hidden transition-all duration-300 h-[600px] lg:h-[calc(100vh-12rem)] min-h-[500px]"
@@ -148,17 +147,9 @@ export const ActiveCallView: React.FC<ActiveCallViewProps> = ({
         </div>
       </div>
 
-      {/* Right Section: Tools (AI & Notes) */}
-      <div className="flex flex-col gap-4 lg:w-[45%] lg:flex-row lg:h-[calc(100vh-12rem)] lg:min-h-[500px]">
-         {/* AI Coach */}
-         <div className="h-[500px] lg:h-full lg:flex-1 min-h-[400px]">
-            <AIAssistant language={language} currentStepTitle={step.title[language]} />
-         </div>
-         
-         {/* Notes Panel */}
-         <div className="h-[300px] lg:h-full lg:flex-1 min-h-[300px]">
-            <NotesPanel language={language} sessionId={sessionId} />
-         </div>
+      {/* Right Section: Notes Only */}
+      <div className="lg:w-[35%] h-[400px] lg:h-[calc(100vh-12rem)] lg:min-h-[500px]">
+         <NotesPanel language={language} sessionId={sessionId} />
       </div>
     </div>
   );
