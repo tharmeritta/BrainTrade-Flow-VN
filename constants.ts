@@ -27,7 +27,7 @@ export const STEPS: Step[] = [
   {
     id: 'kyc',
     title: { en: '2. KYC + Chemistry', vn: '2. Thấu hiểu khách hàng (KYC)' },
-    timeLimit: '<= 30 mins',
+    timeLimit: '4 mins',
     description: { en: 'Deep dive into customer needs and pain points.', vn: 'Tìm hiểu sâu về nhu cầu và nỗi đau của khách hàng.' },
     points: [
       {
@@ -71,7 +71,7 @@ export const STEPS: Step[] = [
   {
     id: 'close',
     title: { en: '4. Close Deal', vn: '4. Chốt đơn' },
-    timeLimit: '<= 15 mins',
+    timeLimit: '<= 5 mins',
     description: { en: 'Guide through payment and activation.', vn: 'Hướng dẫn thanh toán và kích hoạt.' },
     points: [
       {

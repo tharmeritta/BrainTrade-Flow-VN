@@ -66,10 +66,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col h-screen overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-gray-50 text-gray-900 font-sans">
       {/* Navbar */}
       <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50 flex-shrink-0">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-6 h-16 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
               TF
@@ -117,10 +117,10 @@ const App: React.FC = () => {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 overflow-hidden flex flex-col">
+      <main className="flex-1 max-w-[1600px] w-full mx-auto p-4 sm:p-6 lg:p-6 flex flex-col gap-6">
         
         {/* Progress Bar (Visible at top) */}
-        <div className="mb-4 overflow-x-auto pb-4 flex-shrink-0">
+        <div className="overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
           <div className="min-w-[600px] flex justify-between gap-4">
              {STEPS.map((step, index) => (
                <div key={step.id} className="flex-1">
@@ -152,7 +152,7 @@ const App: React.FC = () => {
               />
             </div>
           ) : (
-             <div className="flex flex-col items-center justify-center h-full text-center bg-white rounded-2xl border border-dashed border-gray-300">
+             <div className="flex flex-col items-center justify-center min-h-[500px] h-full text-center bg-white rounded-2xl border-2 border-dashed border-gray-200">
                 <LayoutGrid size={48} className="text-gray-300 mb-4" />
                 <h3 className="text-xl font-medium text-gray-500 mb-2">
                   {language === 'en' ? 'Mind Map Overview' : 'Tổng quan sơ đồ tư duy'}
